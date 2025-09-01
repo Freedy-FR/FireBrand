@@ -1,0 +1,13 @@
+title: FireBrand
+description: My GitHub Pages site
+theme: jekyll-theme-primer
+
+exclude:
+  - node_modules
+  - vendor
+  - Gemfile
+  - Gemfile.lock
+  - package.json
+  - package-lock.json
+  - README.md
+  - .gitignore
