@@ -1,5 +1,6 @@
 import { Routes, Route } from "react-router-dom";
 import Layout from "./components/Layout";
+import Home from "./components/Home";
 import About from "./components/About";
 import Events from "./components/Events";
 import Gallery from "./components/Gallery";
@@ -10,7 +11,7 @@ function App() {
     <Routes>
       {/* Layout wraps around all routes */}
       <Route path="/" element={<Layout />}>
-        <Route index element={<h1>Welcome to FireBrand Church</h1>} />
+        <Route index element={<Home />} />
         <Route path="about" element={<About />} />
         <Route path="events" element={<Events />} />
         <Route path="gallery" element={<Gallery />} />

@@ -1,4 +1,5 @@
 import { Link, Outlet } from "react-router-dom";
+import Logo from "../assets/logo.svg"; // adjust the path if needed
 
 function Layout() {
   return (
@@ -10,18 +11,11 @@ function Layout() {
 
           {/* Logo */}
           <Link to="/" className="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              stroke="currentColor"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              className="w-10 h-10 text-white p-2 bg-red-500 rounded-full"
-              viewBox="0 0 24 24"
-            >
-              <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
-            </svg>
+            <img
+              src={Logo}
+              alt="FireBrand Church Logo"
+              className="w-10 h-10 rounded-full"
+            />
             <span className="ml-3 text-xl text-gray-500 hover:text-gray-800 transition-colors duration-200">
               FireBrand Church
             </span>
@@ -41,14 +35,11 @@ function Layout() {
             <Link to="/gallery" className="mr-5">
               <span className="text-gray-500 hover:text-gray-800 transition-colors duration-200">Gallery</span>
             </Link>
-            <Link to="/donate" className="mr-5">
-              <span className="text-gray-500 hover:text-gray-800 transition-colors duration-200">Donate</span>
-            </Link>
           </nav>
 
           {/* Button */}
           <button className="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0">
-            Button
+            Donate
             <svg
               fill="none"
               stroke="currentColor"
@@ -74,10 +65,12 @@ function Layout() {
       <footer className="text-gray-600 body-font bg-gray-100">
         <div className="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
           <Link to="/" className="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-10 h-10 text-white p-2 bg-red-500 rounded-full" viewBox="0 0 24 24">
-              <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
-            </svg>
-            <span className="ml-3 text-xl">FireBrand Church</span>
+            <img
+              src={Logo}
+              alt="FireBrand Church Logo"
+              className="w-10 h-10 rounded-full"
+            />
+            <span className="ml-3 text-xl text-gray-500 hover:text-gray-800 transition-colors duration-200">FireBrand Church</span>
           </Link>
           <p className="text-sm text-gray-500 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4">
             © 2025 FireBrand Church
