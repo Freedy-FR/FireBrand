@@ -4,6 +4,7 @@ theme: jekyll-theme-primer
 
 exclude:
   - node_modules
+  - server/node_modules
   - vendor
   - Gemfile
   - Gemfile.lock
