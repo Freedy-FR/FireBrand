@@ -1,35 +1,28 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { Routes, Route, Link } from "react-router-dom";
+import About from "./components/About";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    <div>
+      <nav>
+        <ul>
+          <li><Link to="/">Home</Link></li>
+          <li><Link to="/about">About</Link></li>
+          <li><Link to="/events">Events</Link></li>
+          <li><Link to="/gallery">Gallery</Link></li>
+          <li><Link to="/donate">Donate</Link></li>
+        </ul>
+      </nav>
+
+      <Routes>
+        <Route path="/" element={<h1>Welcome to FireBrand Church</h1>} />
+        <Route path="/about" element={<About />} />
+        <Route path="/events" element={<h1>Events page coming soon</h1>} />
+        <Route path="/gallery" element={<h1>Gallery page coming soon</h1>} />
+        <Route path="/donate" element={<h1>Donation page coming soon</h1>} />
+      </Routes>
+    </div>
+  );
 }
 
-export default App
+export default App;
